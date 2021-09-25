@@ -1,0 +1,32 @@
+env:
+  es2020: true
+  jest/globals: true
+parser: @typescript-eslint/parser
+parserOptions:
+  project: ./tsconfig.json
+plugins:
+  - @typescript-eslint
+  - jest
+  - import
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:import/typescript
+  - plugin:jest/recommended
+  - google
+  - prettier
+  - prettier/@typescript-eslint
+ignorePatterns:
+  - /lib/**/*
+rules:
+  quotes: [error, single]
+  camelcase: false
+  require-jsdoc : false
+  @typescript-eslint/explicit-module-boundary-types: false
+  @typescript-eslint/no-unused-vars: [error, { argsIgnorePattern: ^_ }]
+  @typescript-eslint/no-var-requires: false
+  @typescript-eslint/no-namespace: false
+  @typescript-eslint/no-explicit-any: false
